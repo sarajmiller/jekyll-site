@@ -1,0 +1,150 @@
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+    .container {
+        max-width: 1100px;
+        margin: auto;
+        display: flex;
+    }
+    a, p, ul li, ol li, h1, h2, h3, h4, h5, h6 {
+            font-family: "Roboto Mono";
+    }
+
+    a, p, ul li, ol li {
+        font-size: 1.2rem;
+    }
+    main {
+        float: right;
+        width: 0%;
+        min-height: 300px;
+    }
+    aside {
+        position: sticky;
+        float: left;
+        width: 10%;
+        right: 100px;
+        min-height: 300px;
+    }
+
+    footer {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        min-height: 300px;
+    }
+
+    sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 200px;
+}
+.topnav {
+  overflow: hidden;
+  background-color: whitesmoke;
+  position: relative;
+  border-bottom: 2px solid black;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: whitesmoke;
+  color: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: whitesmoke;
+  color: white;
+}
+
+@media (max-width: 900px) {
+    main {
+        width: 100%;
+    }
+    aside {
+        width: 100%;
+    }
+}
+</style>
+
+<div class="topnav">
+    <a href="/index.html" class="active">Home</a>
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+      <a href="#news">Period</a>
+      <a href="#contact">Slay</a>
+      <a href="/about.html">About</a>
+    </div>
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"> Menu </i>
+    </a>
+  </div>
+
+<aside>
+    <h3>Recent Posts</h3>
+    
+    <li><a href="/jekyll/update/2024/10/02/welcome-to-jekyll.html">Welcome to Jekyll!</a></li>
+    
+</aside>
+
+<div class="container">
+    <div class="main">
+        <p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+
+<p>Jekyll requires blog post files to be named according to the following format:</p>
+
+<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
+
+<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+
+<p>Jekyll also offers powerful support for code snippets:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
+<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+
+<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
+
+
+    
+    </div>
+</div>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }</script>
+
